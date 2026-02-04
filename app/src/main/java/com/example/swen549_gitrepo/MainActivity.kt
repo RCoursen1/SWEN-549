@@ -25,11 +25,8 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.material3.Switch
-import androidx.compose.material3.SwitchDefaults
 import androidx.compose.runtime.*
-
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,7 +35,6 @@ class MainActivity : ComponentActivity() {
         setContent {
             SWEN549gitrepoTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-
 //RSVP
                     MakeText(
                         "Graduation RSVP-RIT",
@@ -59,9 +55,7 @@ class MainActivity : ComponentActivity() {
                             .padding(innerPadding),
                         Color.Red,
                         50f,
-                        Color.Transparent,
-                        15,
-                        10
+
                     )
 //monday 10am
                     MakeText(
@@ -70,10 +64,7 @@ class MainActivity : ComponentActivity() {
                             .offset(y = 500.dp)
                             .padding(innerPadding),
                         Color.Blue,
-                        25f,
-                        Color.Transparent,
-                        15,
-                        15
+
                     )
 //Pic
                     Column(
@@ -90,7 +81,7 @@ class MainActivity : ComponentActivity() {
                         )
                     }
                     Column(
-                        modifier = Modifier.fillMaxSize().offset(y=700.dp),
+                        modifier = Modifier.fillMaxSize().offset(y=675.dp),
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
 
@@ -104,11 +95,7 @@ class MainActivity : ComponentActivity() {
                                 modifier = Modifier
                                     .offset(y = (-50).dp)
                                     .padding(innerPadding),
-                                Color.Black,
-                                25f,
-                                Color.Transparent,
-                                20,
-                                15
+
                             )
                         }
                         else{
@@ -117,11 +104,7 @@ class MainActivity : ComponentActivity() {
                                 modifier = Modifier
                                     .offset(y = (-50).dp)
                                     .padding(innerPadding),
-                                Color.Black,
-                                25f,
-                                Color.Transparent,
-                                20,
-                                15
+
                             )
                         }
                     }
@@ -132,14 +115,12 @@ class MainActivity : ComponentActivity() {
 }
 
 
-
-
 @Composable
 fun MakeText(
     message: String,
     modifier: Modifier = Modifier,
-    textColor: Color = Color.Blue,
-    textSize: Float = 16f,
+    textColor: Color = Color.Black,
+    textSize: Float = 25f,
     backgroundColor: Color = Color.Transparent,
     paddingHorizontal: Int = 15,
     paddingVertical: Int = 15,
